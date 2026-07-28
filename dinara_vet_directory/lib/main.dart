@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DINARA VET',
+      title: 'VetRef',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
@@ -60,7 +60,7 @@ class _MedicationDirectoryScreenState extends State<MedicationDirectoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DINARA VET - Справочник'),
+        title: const Text('VetRef - Справочник'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Column(
