@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="dinara_vet_directory"
+        android:label="VetRef"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

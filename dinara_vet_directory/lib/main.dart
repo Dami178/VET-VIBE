@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DINARA VET',
+      title: 'VetRef',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
@@ -60,7 +60,7 @@ class _MedicationDirectoryScreenState extends State<MedicationDirectoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DINARA VET - Справочник'),
+        title: const Text('VetRef - Справочник'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Column(
@@ -143,17 +143,25 @@ class MedicationDetailScreen extends StatelessWidget {
           children: [
             Text(
               medication.name,
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF1B3B5C), // Dark blue as in the image
+                  ),
             ),
-            const SizedBox(height: 16),
-            Text(
-              'Описание:',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              medication.description,
-              style: Theme.of(context).textTheme.bodyLarge,
+            const SizedBox(height: 24),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF9F9F9), // Light gray background
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: Text(
+                medication.description,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: const Color(0xFF333333),
+                      height: 1.5,
+                    ),
+              ),
             ),
           ],
         ),
